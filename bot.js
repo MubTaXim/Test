@@ -55,30 +55,6 @@ function createBot() {
          logger.info(`Authentication commands executed`);
       }
 
-      // Chat messages feature
-      if (config.utils['chat-messages'].enabled) {
-         logger.info('Started chat-messages module');
-
-         let messages = config.utils['chat-messages']['messages'];
-
-         if (config.utils['chat-messages'].repeat) {
-            let delay = config.utils['chat-messages']['repeat-delay'];
-            let i = 0;
-
-            setInterval(() => {
-               bot.chat(`${messages[i]}`);
-
-               if (i + 1 === messages.length) {
-                  i = 0;
-               } else i++;
-            }, delay * 1000);
-         } else {
-            messages.forEach((msg) => {
-               bot.chat(msg);
-            });
-         }
-      }
-
       // Movement to target position
       const pos = config.position;
       if (config.position.enabled) {
@@ -124,12 +100,6 @@ function createBot() {
             let radius = config.utils['anti-afk']['circle-walk'].radius;
             circleWalk(bot, radius);
          }
-      }
-   });
-
-   bot.on('chat', (username, message) => {
-      if (config.utils['chat-log']) {
-         logger.info(`<${username}> ${message}`);
       }
    });
 
