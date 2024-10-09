@@ -26,24 +26,34 @@
 
     "anti-afk": {
       "enabled": true,
-      "sneak": true
+      "sneak": true,
+      "jump": true,
+      "hit": {
+        "enabled": true,
+        "delay": 5,
+        "attackMobs": true
+      },
+      "rotate": true,
+      "circle-walk": {
+        "enabled": false,
+        "radius": 5
+      }
     },
 
     "chat-messages": {
       "enabled": false,
       "repeat": true,
       "repeat-delay": 60,
-
       "messages": [
-        "I'm a regular player ",
-        "My owner is urFate_ ",
-        "I want be alone ",
+        "I'm a regular player",
+        "My owner is urFate_",
+        "I want to be alone",
         "I loved her"
       ]
     },
 
     "chat-log": false,
     "auto-reconnect": true,
-    "auto-recconect-delay": 5000
+    "auto-reconnect-delay": 5000
   }
 }
