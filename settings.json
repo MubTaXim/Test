@@ -6,8 +6,8 @@
   },
 
   "server": {
-    "ip": "emerald.magmanode.com",
-    "port": 31594,
+    "ip": "mubtaxim.aternos.me",
+    "port": 53328,
     "version": "1.19.3"
   },
 
@@ -42,7 +42,7 @@
       ]
     },
 
-    "chat-log": true,
+    "chat-log": false,
     "auto-reconnect": true,
     "auto-recconect-delay": 5000
   }
