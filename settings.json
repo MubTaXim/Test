@@ -30,7 +30,7 @@
     },
 
     "chat-messages": {
-      "enabled": false,
+      "enabled": true,
       "repeat": true,
       "repeat-delay": 60,
 
@@ -42,7 +42,7 @@
       ]
     },
 
-    "chat-log": false,
+    "chat-log": true,
     "auto-reconnect": true,
     "auto-recconect-delay": 5000
   }
