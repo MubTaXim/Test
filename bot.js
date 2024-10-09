@@ -29,11 +29,7 @@ function createBot() {
    bot.loadPlugin(pathfinder);
    const mcData = require('minecraft-data')(bot.version);
    const defaultMove = new Movements(bot, mcData);
-
-   // Initialize bot.settings if undefined
-   bot.settings = bot.settings || {};
-   bot.settings.colorsEnabled = false;  // Ensure settings is initialized
-
+   bot.settings.colorsEnabled = false;
    bot.pathfinder.setMovements(defaultMove);
 
    bot.once('spawn', () => {
